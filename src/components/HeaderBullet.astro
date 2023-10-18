@@ -1,0 +1,9 @@
+---
+export interface Props {
+	text: string
+}
+
+const { text } = Astro.props
+---
+
+<li class="flex gap-4 text-2xl font-bold text-white py-2"><img src="/bullet-icon.svg">{text}</li>

@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { Image } from 'astro:assets'
+import intro from '../assets/images/intro.jpg'
+import IntroBullet from '../components/IntroBullet.astro'
+import StepsPanel from '../components/StepsPanel.astro'
+import Testimonial from '../components/Testimonial.astro'
+---
+
+<Layout title="JWW Stanley Free No Obligation Valuations">
+	<Header />
+	<main class="mx-auto w-full">
+		<section class="section mx-auto flex w-full max-w-7xl flex-row gap-8 px-8 py-[72px] max-md:flex-col max-md:px-4">
+			<figure class="w-2/5 max-lg:w-1/2 max-md:w-full">
+				<Image
+					src={intro}
+					alt="Country houses on a country lane"
+					class="h-full w-full rounded-xl object-cover"
+				/>
+			</figure>
+			<div class="flex w-3/5 flex-row items-center max-lg:w-1/2 max-md:w-full">
+				<div class="flex flex-col gap-y-16">
+					<div class="flex flex-col gap-y-6">
+						<h2 class="text-4xl font-bold uppercase">JW Wood Estate Agents — Stanley</h2>
+						<p class="text-2xl">Our trustworthy and dedicated team at JW Wood Estate Agents brings over 100 years of experience in real estate, coupled with modern and innovative techniques, to offer the most accurate, comprehensive, free property valuations.</p>
+					</div>
+					<div class="flex flex-col gap-y-6">
+						<IntroBullet
+							icon="/icon-intro-1.svg"
+							title="Experienced Professionals"
+							text="With decades of local market knowledge, we provide accurate property valuations based on unmatched industry expertise."
+						/>
+						<IntroBullet
+							icon="/icon-intro-2.svg"
+							title="Comprehensive Assessment"
+							text="We not only look at comparative house prices in the area but also evaluate local trends, property condition, its unique features and potential."
+						/>
+						<IntroBullet
+							icon="/icon-intro-3.svg"
+							title="No Obligation"
+							text="There's no strings attached to our valuation services. They are complimentary and come with zero obligation."
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="section bg-section-bg py-36">
+			<section class="mx-auto w-full max-w-7xl px-8">
+				<h3 class="mb-12 text-4xl font-bold text-white">Your Free Property Valuation <span class="block text-2xl font-normal text-light-teal">In Three Easy Steps</span></h3>
+				<div class="mx-auto flex flex-row gap-8 max-lg:flex-col">
+					<StepsPanel
+						step={Number(1)}
+						heading="Provide your details"
+						content="Give us your details along with your contact information to get in touch with you and the best way to reach you."
+					/>
+					<StepsPanel
+						step={Number(2)}
+						heading="Choose a suitable time"
+						content="Choose a time convenient to you that one of our professional agents can visit your home. We operate on weekends too!"
+					/>
+					<StepsPanel
+						step={Number(3)}
+						heading="Get your comprehensive report"
+						content="You'll receive a comprehensive report detailing your property's market value and helpful insights to maximise its selling potential."
+					/>
+				</div>
+			</section>
+		</div>
+		<section class="section mx-auto flex w-full max-w-7xl flex-col items-center gap-y-9 px-8 py-[72px]">
+			<h3 class="text-4xl font-bold">JW Wood Estate Agents — Stanley</h3>
+			<p class="text-center text-lg text-gray-600">Join countless homeowners who've entrusted us with their property valuation needs. With JW Wood Estate Agents, you can set your pricing strategy right from the start. Start your selling journey today.</p>
+			<div class="flex flex-col items-center">
+				<a
+					href="#valuation"
+					type="button"
+					class="rounded-lg bg-dark-teal px-5 py-3 text-center text-base font-medium uppercase text-white transition-all duration-150 hover:bg-teal-800 focus:outline-none focus:ring-4 focus:ring-blue-300">
+					Request your FREE property valuation
+				</a>
+			</div>
+		</section>
+		<div class="section bg-section-bg py-36">
+			<section class="mx-auto w-full max-w-7xl px-8">
+				<div class="mx-auto flex w-full flex-row gap-8 max-lg:flex-col">
+					<Testimonial
+						title="Professional and friendly. A winning combination"
+						body="Thank you to your professional team for an outstanding service from start to finish. When it came to viewings nothing was too much trouble when we had a full work diary. If we ever move again we’ll be back!"
+						author="Craig and Helen"
+						location="Stanley"
+					/>
+					<Testimonial
+						title="An easy and fresh approach to getting us sold"
+						body="The tips in your report and more importantly how to action them were the best part of the valuation process. Your guidance on pricing was also quite literally invaluable. We ended up selling for above the asking price."
+						author="Mrs Mosely"
+						location="Stanley"
+					/>
+					<Testimonial
+						title="You were there every step of the way!"
+						body="We can’t thank you enough! We struggled to sell for months and after your report and the kind assistance of Johnathan we went to market and sold in under three weeks. Highly recommended"
+						author="Mia Chu"
+						location="Stanley"
+					/>
+				</div>
+			</section>
+		</div>
+		<div
+			id="valuation"
+			class="mx-auto flex max-w-7xl items-center px-8 py-[72px]">
+			FORM
+		</div>
+		<Footer />
+	</main>
+</Layout>
